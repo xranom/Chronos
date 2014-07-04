@@ -1,3 +1,4 @@
-Entity Component System
+# Chronos
+### An Entity Component System
 
-http://www.synapticpulse.com
+Follow the development process at http://www.synapticpulse.com
