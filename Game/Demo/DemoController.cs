@@ -1,5 +1,6 @@
 ﻿using Chronos.Core.Context;
 using Chronos.Core.Controller;
+using Chronos.Core.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace Game.Demo
     {
         public void Initialise(IContext context)
         {
-            
+
+
         }
     }
 }

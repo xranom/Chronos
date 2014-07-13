@@ -17,9 +17,12 @@ namespace Chronos.Core.Application
     public class ApplicationHost : GameWindow
     {
 
+
         private IController controller;
 
         private IContext context;
+
+
 
         /// <summary>
         /// Start an ApplicationHost with the specified controller

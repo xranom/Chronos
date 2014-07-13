@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chronos.Core.Controller
+namespace Chronos.Core.System
 {
-    public interface IController
+    public interface ISystem
     {
+
         void Initialise(IContext context);
+
     }
 }
