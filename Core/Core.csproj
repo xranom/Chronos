@@ -60,6 +60,7 @@
     <Compile Include="Controller\StandardContext.cs" />
     <Compile Include="Entity\EntityEventArgs.cs" />
     <Compile Include="Entity\EntityManager.cs" />
+    <Compile Include="Entity\EntitySet.cs" />
     <Compile Include="Entity\IEntity.cs" />
     <Compile Include="Entity\StandardEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
