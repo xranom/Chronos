@@ -42,6 +42,8 @@ namespace Chronos.Core.Context
 
         void RemoveSystem(ISystem system);
 
+        void AddService(IService service);
+
         T GetSystem<T>() where T : ISystem;
 
         T GetService<T>() where T : IService;

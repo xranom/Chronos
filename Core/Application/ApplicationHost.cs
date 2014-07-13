@@ -1,5 +1,6 @@
 ﻿using Chronos.Core.Context;
 using Chronos.Core.Controller;
+using Chronos.Core.Service;
 using OpenTK;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,11 @@ namespace Chronos.Core.Application
 
         private IContext context;
 
+        private Input input;
 
+        private Clock clock;
+
+        private Display display;
 
         /// <summary>
         /// Start an ApplicationHost with the specified controller
@@ -52,8 +57,19 @@ namespace Chronos.Core.Application
             ApplicationConfiguration configuration)
         : base(configuration.Width, configuration.Height, configuration.GraphicsMode, configuration.Title)
         {
+           
             this.controller = controller;
             this.context = new StandardContext();
+
+            input = new Input(this, Keyboard, Mouse);
+            context.AddService(input);
+
+            clock = new Clock();
+            context.AddService(clock);
+
+            display = new Display(this);
+            context.AddService(display);
+
         }
 
         protected override void OnLoad(EventArgs e)
@@ -71,12 +87,14 @@ namespace Chronos.Core.Application
         protected override void OnRenderFrame(FrameEventArgs e)
         {
             base.OnRenderFrame(e);
+            display.Render();
             SwapBuffers();
         }
 
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
+            display.Resize();
         }
 
     }

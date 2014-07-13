@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -76,6 +77,7 @@
     <Compile Include="Serialization\Vector3Converter.cs" />
     <Compile Include="Serialization\Vector4Converter.cs" />
     <Compile Include="Service\Clock.cs" />
+    <Compile Include="Service\Display.cs" />
     <Compile Include="Service\Input.cs" />
     <Compile Include="Service\IService.cs" />
     <Compile Include="Service\MouseEventArgs.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="System\ISystem.cs" />
     <Compile Include="System\SystemManager.cs" />
     <Compile Include="System\VariableTickSystem.cs" />
+    <Compile Include="Types\Color4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
